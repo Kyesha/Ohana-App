@@ -1,45 +1,64 @@
 import React from 'react';
 import axios from 'axios';
+import Home from './Components/Home';
+// import Navbar from './Components/Navbar';
+import { BrowserRouter, Route} from "react-router-dom"
+
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      list: []
+      events: [] ,
+      images: []
     };
   }
 
 // const API_KEY = process.env.REACT_APP_OHANA_API_KEY;
 
+
+
+
+
 componentDidMount = () => {
-  const json = sessionStorage.getItem("list");
-  const list = JSON.parse(json);
-  this.getEvents()
-}
+  const showMeSomething = axios.get('/ohana', { headers: { Authorization: 'Bearer TK7GHO3SN4TCQ6SAOL2B' }})
+  .then((response) => {
+    console.log(response.data)
+    this.setState({events: response.data})
 
-componentDidUpdate = () => {
-  const list = JSON.stringify(this.state.list)
-  sessionStorage.setItem("list", list)
-}
+  })
 
-getEvents = async () => {
-  const response = await axios.get('/ohana')
-  this.setState({list:response.data})
+  const showMeImage = axios.get('/ohana', { headers: { Authorization: 'Bearer TK7GHO3SN4TCQ6SAOL2B'}})
+  .then((response) => {
+    console.log(response.data)
+    this.setState({image:response.data})
+  })
   }
+
+
+
+
+
   render() {
-    console.log(this.state.list)
     return (
       <div>
-        hello
-        {this.state.list.map(event => (
-          <div>
-            <p>Name: { event.name }</p>
-            <p>Description: { event.description }</p>
-            <p>Url: {event.url}</p>
-          </div>
+        <h1>Name</h1>
+    {this.state.events.map((event, index) => (
+          <div key={index}>
+              <p>{event.name}</p>
+              <p>{event.description}</p>
+              <p>{event.url}</p>
+              <img src={event.logo} alt="event image"/>
+    {this.state.images.map((event, index) =>
+                <div key={index}>
+                  <p>{event.upload_url}</p>
+
+                </div>)}
+            </div>
+
         ))}
+
       </div>
-      )
-  }
+)}
 }
 export default App;
