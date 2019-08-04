@@ -4,6 +4,7 @@ import Home from './Components/Home';
 // import Navbar from './Components/Navbar';
 import { BrowserRouter, Route} from "react-router-dom"
 
+const API_KEY = process.env.REACT_APP_OHANA_API_KEY;
 
 class App extends React.Component {
   constructor(props) {
@@ -14,21 +15,16 @@ class App extends React.Component {
     };
   }
 
-// const API_KEY = process.env.REACT_APP_OHANA_API_KEY;
-
-
-
-
 
 componentDidMount = () => {
-  const showMeSomething = axios.get('/ohana', { headers: { Authorization: 'Bearer TK7GHO3SN4TCQ6SAOL2B' }})
+  const showMeSomething = axios.get('/ohana', { headers: { Authorization: 'Bearer ' + API_KEY }})
   .then((response) => {
     console.log(response.data)
     this.setState({events: response.data})
 
   })
 
-  const showMeImage = axios.get('/ohana', { headers: { Authorization: 'Bearer TK7GHO3SN4TCQ6SAOL2B'}})
+  const showMeImage = axios.get('/ohana', { headers: { Authorization: 'Bearer ' + API_KEY }})
   .then((response) => {
     console.log(response.data)
     this.setState({image:response.data})
