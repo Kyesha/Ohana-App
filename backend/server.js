@@ -19,7 +19,7 @@ app.get('/ohana', async (request, response) => {
         description: event.description.text,
         url: event.url,
         logo: event.logo.url,
-        details:event.details.text
+        details:event.details
 
 
 
