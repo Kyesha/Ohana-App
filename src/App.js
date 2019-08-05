@@ -7,7 +7,8 @@ import SearchBar from "./Components/SearchBar";
 import axios from 'axios';
 
 
-class App extends React.Component{
+// Event
+class App extends Component {
   render() {
     return(
       <Router>
