@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import SignUp from "./Components/SignUp";
+import SearchBar from "./Components/SearchBar";
 import axios from 'axios';
 
 
@@ -10,9 +11,11 @@ class App extends React.Component{
   render() {
     return(
       <Router>
-        <Route path="/SignUp" to={SignUp}>
-        </Route>
+        <Route path="/SignUp" to={SignUp}></Route>
         <SignUp />
+
+      <Route path="/SearchBar" to={SearchBar}></Route>
+      <SearchBar />
       </Router>
     );
   }
