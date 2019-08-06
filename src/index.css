@@ -45,3 +45,7 @@ color: #fff;
 .icon-bar{
   color: #243c4f;
 }
+
+.carousel-item {
+  justify-content: center;
+}
