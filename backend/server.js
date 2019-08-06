@@ -1,3 +1,4 @@
+
 const express = require('express');
 const app = express();
 const PORT = 4000;
@@ -6,6 +7,7 @@ const session = require('express-session');
 const passport = require('./Passport');
 const dbConnection = require('./Databases');
 const MongoStore = require('connect-mongo')(session);
+const axios = require('axios')
 
 // Originally had user = require
 const userRoute = require('./Routes/userRoute');
@@ -45,3 +47,31 @@ session({
 // Passport
 app.use(passport.initialize())
 app.use(passport.session()) // calls the deserializeUser
+
+
+
+
+
+app.get('/hello', (request, response) => {
+  response.send('hello world')
+})
+
+
+
+app.get('/ohana', async (request, response) => {
+  const res = await axios.get('https://www.eventbriteapi.com/v3/events/search?location.address=miami', { headers: { Authorization: 'Bearer TK7GHO3SN4TCQ6SAOL2B' }})
+  const events = res.data.events.map(event => {
+    console.log(event);
+    return(
+      {
+        name: event.name.text,
+        description: event.description.text,
+        url: event.url,
+        logo: event.logo.url,
+        details: event.details,
+        is_free: event.is_free
+      }
+    )
+  })
+  response.send(events)
+})

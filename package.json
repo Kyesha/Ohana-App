@@ -3,20 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-<<<<<<< HEAD
     "@material-ui/core": "^4.3.0",
     "axios": "^0.19.0",
     "body-parser": "^1.19.0",
     "bootstrap": "^4.3.1",
     "express": "^4.17.1",
-=======
-    "material-ui-search-bar": "^1.0.0-beta.13",
->>>>>>> 3cbb651281ec9e6fdab5b988a2151667b4063113
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
-    "react-select-us-states": "^0.1.2"
+    "react-select-us-states": "^0.1.2",
+    "dotenv": "^8.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
