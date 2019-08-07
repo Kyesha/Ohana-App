@@ -43,7 +43,7 @@ render() {
               {/*<!-- End -->*/}
 
               {/*<!-- Sidebar on small screens when clicking the menu icon -->*/}
-              <nav className="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+              <nav className="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style={{display:'none'}} id="mySidebar">
                 <a href="javascript:void(0)" onclick="w3_close()" className="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
                 <a to="/Profile" href="#team" onclick="w3_close()" className="w3-bar-item w3-button">PROFILE</a>
                 {/*<a href="#work" onclick="w3_close()" className="w3-bar-item w3-button">EVENTS</a>*/}
