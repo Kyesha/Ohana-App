@@ -1,17 +1,9 @@
-<<<<<<< HEAD
-import React from 'react'
-=======
+
 import React, { Component } from 'react'
->>>>>>> origin/master
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Event from './Event';
 
-
-<<<<<<< HEAD
-class Home extends React.Component {
-=======
 class Home extends Component {
->>>>>>> origin/master
   constructor() {
       super()
   }
