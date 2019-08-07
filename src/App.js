@@ -1,5 +1,9 @@
-import React, { Component } from 'react';
-import { Route, Link } from 'react-router-dom'
+import React from 'react';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import SignUp from "./Components/SignUp";
+import SearchBar from "./Components/SearchBar";
 import axios from 'axios';
 import './App.css';
 
@@ -10,11 +14,15 @@ import Home from "./Components/Home";
 class App extends Component {
   render() {
     return(
-      <div className="App">
-        <Route path="/Home" to={Home}></Route>
-        <Home/>
-      </div>
+      <Router>
+        <Route path="/SignUp" to={SignUp}></Route>
+        <SignUp />
+
+      <Route path="/SearchBar" to={SearchBar}></Route>
+      <SearchBar />
+      </Router>
     );
   }
-}
+
+
 export default App;
