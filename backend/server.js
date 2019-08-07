@@ -74,7 +74,3 @@ app.get('/ohana', async (request, response) => {
   })
   response.send(events)
 })
-
-const PORT = 5001
-
-app.listen(PORT, () => console.log ('app is listening on PORT 5001'))
