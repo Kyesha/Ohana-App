@@ -116,6 +116,7 @@ render()
         <a href="#work" onclick="w3_close()" className="w3-bar-item w3-button">EVENTS</a>
       </nav>
 <!-- End -->
+<<<<<<< HEAD
 
 
 
@@ -138,3 +139,5 @@ render()
 </div>
 </div>*/}
 {/*// <!-- End -->*/}
+=======
+>>>>>>> origin/master
