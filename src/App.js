@@ -20,10 +20,10 @@ class App extends React.Component {
     return(
       <Router className="App">
                 <TryNavbar/>
-                <Route path="/Event" to={Event}></Route>
-                <Event />
                 <Route path="/Home" to={Home}></Route>
                 <Home />
+                <Route path="/Event" to={Event}></Route>
+                <Event />
                 <Route path="/Profile" to={Profile}></Route>
                 <Profile />
                 <Route path="/SignUp" to={SignUp}></Route>
