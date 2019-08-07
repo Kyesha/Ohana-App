@@ -2,6 +2,7 @@ import React from "react";
 import { Redirect} from 'react-router-dom';
 import { Route, Link} from 'react-router-dom';
 import axios from 'axios';
+import App from '../App'
 
 class TryNavBar extends React.Component {
 
@@ -9,18 +10,18 @@ render() {
        return (
         <div className="w3-top">
         <div className="w3-bar w3-white w3-card" id="myNavbar">
-        <a to="/Home" href="#home" className="w3-bar-item w3-button w3-wide">NO ONE GETS LEFT BEHIND</a>
+        <a href="/" className="w3-bar-item w3-button w3-wide">NO ONE GETS LEFT BEHIND</a>
 
         {/*<!-- Right-sided navbar links -->*/}
 
         <div className="w3-right w3-hide-small">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item dropdown">
-              <a to="/SignUp" className="nav-link dropdown-toggle" href="#profile" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a className="nav-link dropdown-toggle" href="/SignUp" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i className="fa fa-th"></i> SIGN UP
                 </a>
                 <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a className="dropdown-item" href="#">Sign In</a>
+                  <a className="dropdown-item" href="/SignUp">Sign Up</a>
                 </div>
                 <br></br>
                 </li>
@@ -29,14 +30,14 @@ render() {
                 <br></br>
                 </div>
                 <div className="w3-right w3-hide-small">
-                  <a to="/Profile" href="#event" className="w3-bar-item w3-button">
+                  <a href="/Profile" className="w3-bar-item w3-button">
                     <i className="fa fa-user"></i> PROFILE
                     </a>
                   </div>
 
                   {/*<!-- Hide right-floated links on small screens and replace them with a menu icon -->*/}
 
-                  <a href="javascript:void(0)" className="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+                  <a href="/SignUp" className="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
                     <i className="fa fa-bars"></i>
                   </a>
                 </div>

@@ -4,21 +4,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Event from './Event';
 
 class Home extends Component {
-  constructor() {
-      super()
-  }
 
   render() {
 
       return (
-          <div className="w3-light-grey">
+          <div className="w3-light-grey margin-home">
 
           {/*// <!-- Sidebar on small screens when clicking the menu icon -->*/}
-          <nav className="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style={{display : 'none'}} id="mySidebar">
-            <a href="javascript:void(0)" onclick="w3_close()" className="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-            <a href="#team" onclick="w3_close()" className="w3-bar-item w3-button">PROFILE</a>
-            <a href="#work" onclick="w3_close()" className="w3-bar-item w3-button">EVENTS</a>
-          </nav>
+
           {/*// <!-- End -->*/}
 
           {/*//  <!-- w3-content defines a container for fixed size centered content,*/}

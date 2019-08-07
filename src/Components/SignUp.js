@@ -61,7 +61,7 @@ class SignUp extends React.Component {
 
 render() {
      return (
-       <form>
+       <form className="container margin">
 
            <div className="text-center">
              <h1 className="text-center">Ohana</h1>
@@ -124,7 +124,7 @@ render() {
 
             </div>
 
-           <button onClick={this.handleSubmit} type="submit" className="btn btn-primary">Sign Up</button>
+           <button onClick={this.handleSubmit} type="submit" className="btn btn-primary btn-block bt-center">Sign Up</button>
 
        </form>
      )

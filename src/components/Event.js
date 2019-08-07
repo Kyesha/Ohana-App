@@ -40,7 +40,7 @@ class Event extends React.Component {
       <div className="w3-row w3-padding w3-border">
         <h1>Events</h1>
         {this.state.events.map((event, index) => (
-            <div className="card border-primary mb-3" style={{maxWidth : '1252px'}}>
+            <div className="card border-primary mb-3 padding" style={{maxWidth : '1252px'}}>
               <div className="row no-gutters">
                 <div className="col-md-4">
                   <img src={event.logo} className="card-img" alt="event image"></img>

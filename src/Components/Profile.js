@@ -6,7 +6,7 @@ class Profile extends React.Component {
 render() {
    return (
 
-    <div>
+    <div className="margin">
     <div>
     <div>
     <div>
