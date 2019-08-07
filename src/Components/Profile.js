@@ -1,152 +1,44 @@
-// import React from 'react';
-// import axios from 'axios';
-//
-// class Profile extends React.Component {
-//   constructor(props) {
-//      super(props);
-//      this.state = {
-//        users: [],
-//        user: {}
-//    }
-//  }
-//
-//  async componentDidMount() {
-//   const id = this.props.match.params._id // we gSrab the ID from the URL
-//   const {data} = await axios.get('/userRoute/${id}')
-//   this.setState({user: data})
-// }
-//
-// Users() {
-//      return this.state.users.map(function(email, i){
-//          return <Users user={email} key={i} />
-//      })
-//     }
-//
-//
-//
-//
-// ender() {
-//         return (
-//             <div>
-//               <p> {}
-//
-//               </p>
-//           </div>
-//         )
-//       }
-// }
-
-// { this.todoList() }
-
-// render() {
-//         return (
-//             <div>
-//               {this.state.users.map(user => {
-//                 const {id} = user
-//                   return (
-//                     <li key={id}>
-//                       Hello
-//                     </li>
-//                   )
-//                })
-//             }
-//           </div>
-//         )
-//       }
-// }
-
-// export default Profile;
-
-//
-//
-//
-//    componentDidMount() {
-//      axios.get('/:id', this.state )
-//          .then(response => {
-//              this.setState({ users: response.data });
-//          })
-//          .catch(function (error){
-//              console.log(error);
-//          })
-//        }
-//
-//
-//     userProfile() {
-//         return this.state.profiles.map(function(user, i){
-//           return <Profile user={ firstName, lastName, email, streetAddress, streetAddressLine2, city, stateProvince, zipCode} key={i} />
-//         })
-//       }
-//
-//     render() {
-//         return (
-//             <div>
-//                 <p>Welcome to Profile!!</p>
-//             </div>
-//         )
-//     }
-// }
-
-
-
-
-//
-//
-//
-//
-//
-// class ParProfile extends React.Component {
-//   constructor(props) {
-//     super(props);
-//     this.state={}
-//   }
-//
-//
-//
-//
-//
-//
-//   axios.get('/user/', {
-//     this.setState.firstName: this.setState.firstName,
-//     this.setState.lastName: this.setState.lastName,
-//
-//
-//
-// }
-//
-// export default ParProfile;
-
-
-
-
-import React, { Component } from 'react';
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 
 class Profile extends React.Component {
-    constructor(props) {
-        super(props);
+render() {
+   return (
+     {/*<!-- Page Container -->*/}
 
-        this.state = {
-            users: {}
-        }
-    }
-
-    componentDidMount = () => {
-        const id = this.props._id;
-        axios.get('/userRoute/${id}')
-            .then(response => {
-                this.setState({
-                    users: response.data
-                })
-            })
-    }
-
-    render() {
-        const { firstName, lastName, email, zipCode } = this.state.user;
-        return (
-            <div>
-            </div>
-        );
-    }
+    <div>
+    <div>
+    <div>
+    <div>
+     <div className="w3-container w3-content" style="max-width:1400px;margin-top:80px">
+       {/*<!-- The Grid -->*/}
+       <div className="w3-row">
+           {/*<!-- Profile -->*/}
+           <div className="w3-card w3-round w3-white">
+             <div className="w3-container">
+              <h4 className="w3-center">Adam Smith</h4>
+              <p className="w3-center"><img src="...." className="w3-circle" style="height:106px;width:106px" alt="Avatar"></img></p>
+              <hr></hr>
+              <p><i className="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i> adamsmith@yahoo.com</p>
+              <p><i className="fa fa-home fa-fw w3-margin-right w3-text-theme"></i> Miami, FL</p>
+              <p><i className="fa fa-birthday-cake fa-fw w3-margin-right w3-text-theme"></i> April 1, 1988</p>
+              </div>
+           </div>
+           <br></br>
+         {/*<!-- End Left Column -->*/}
+         </div>
+         {/*<!-- End Middle Column -->*/}
+         </div>
+         {/*<!-- End Right Column -->*/}
+         </div>
+       {/*<!-- End Grid -->*/}
+       </div>
+     {/*}<!-- End Page Container -->*/}
+     </div>
+  </div>
+   )
+ }
 }
 
 export default Profile;

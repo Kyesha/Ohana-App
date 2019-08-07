@@ -36,7 +36,7 @@ class LogIn extends React.Component {
                         loggedIn: true,
                         email: response.data.email
                     })
-                    // update the state to redirect to home
+        
                     this.setState({
                         redirectTo: '/Home'
                     })

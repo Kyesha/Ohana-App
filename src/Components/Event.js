@@ -18,7 +18,6 @@ class Event extends React.Component {
   }
 
   componentDidMount = () => {
-    // const showmesomthign doesnt do anything
     const showMeSomething = axios.get('/ohana', { headers: { Authorization: 'Bearer ' + API_KEY }})
       .then((response) => {
         console.log(response.data)

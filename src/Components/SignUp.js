@@ -47,7 +47,7 @@ class SignUp extends React.Component {
 				if (!response.data.errmsg) {
 					console.log('successful signup')
 					this.setState({
-						redirectTo: '/Home'
+						redirectTo: '/Profile'
 					})
 				} else {
 					console.log('Email already taken')
