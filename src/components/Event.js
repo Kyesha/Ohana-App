@@ -3,7 +3,7 @@ import axios from 'axios';
 
 // import Navbar from './Components/Navbar';
 import { BrowserRouter, Route} from "react-router-dom"
-
+import './Components/Profile';
 // import './index.html';
 
 
@@ -58,7 +58,7 @@ class Event extends React.Component {
                 <p>{event.utc}</p>
                 <p>{event.summary}</p>
                 <p>{event.venue}</p>
-                
+
               </div>
           ))}
 
